@@ -152,42 +152,42 @@ body {
   }
 }
 
-.c-robot {
-  max-width: 20rem;
-}
-
 .c-robot__container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.c-robot__robot {
-  animation-name: robot_hover;
-  animation-duration: var(--robot-animation-duration);
-  animation-timing-function: var(--robot-animation-timing);
-  animation-iteration-count: var(--robot-animation-iteration);
-  animation-direction: var(--robot-animation-direction);
-}
+  .c-robot {
+    max-width: 20rem;
 
-.c-robot__body {
-  fill: white;
-}
+    .c-robot__robot {
+      animation-name: robot_hover;
+      animation-duration: var(--robot-animation-duration);
+      animation-timing-function: var(--robot-animation-timing);
+      animation-iteration-count: var(--robot-animation-iteration);
+      animation-direction: var(--robot-animation-direction);
 
-.c-robot__shadow {
-  opacity: .1;
-  transform-origin: 50% 100%;
-  animation-name: shadow_pulse;
-  animation-duration: var(--robot-animation-duration);
-  animation-timing-function: var(--robot-animation-timing);
-  animation-iteration-count: var(--robot-animation-iteration);
-  animation-direction: var(--robot-animation-direction);
+      .c-robot__body {
+        fill: white;
+      }
+
+      .c-robot__shadow {
+        opacity: .1;
+        transform-origin: 50% 100%;
+        animation-name: shadow_pulse;
+        animation-duration: var(--robot-animation-duration);
+        animation-timing-function: var(--robot-animation-timing);
+        animation-iteration-count: var(--robot-animation-iteration);
+        animation-direction: var(--robot-animation-direction);
+      }
+    }
+  }
 }
 
 
 /*
-    Component: Controls
+Component: Controls
 */
 
 /*------------------------------------*\
@@ -206,6 +206,7 @@ body {
 */
 
 @media print {
+
   *,
   *:before,
   *:after {
@@ -216,16 +217,20 @@ body {
     box-shadow: none !important;
     text-shadow: none !important;
   }
+
   a,
   a:visited {
     text-decoration: underline;
   }
+
   a[href]:after {
     content: ' (' attr(href) ')';
   }
+
   abbr[title]:after {
     content: ' (' attr(title) ')';
   }
+
   /*
     * Don't show links that are fragment identifiers,
     * or use the `javascript:` pseudo protocol
@@ -234,14 +239,17 @@ body {
   a[href^='javascript:']:after {
     content: '';
   }
+
   pre {
     white-space: pre-wrap !important;
   }
+
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
+
   /*
     * Printing Tables:
     * http://css-discuss.incutio.com/wiki/Printing_Tables
@@ -249,16 +257,19 @@ body {
   thead {
     display: table-header-group;
   }
+
   tr,
   img {
     page-break-inside: avoid;
   }
+
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3;
   }
+
   h2,
   h3 {
     page-break-after: avoid;
